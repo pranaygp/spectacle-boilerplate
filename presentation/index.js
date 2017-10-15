@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   Code,
   Deck,
   Fill,
@@ -61,46 +62,44 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["zoom"]} bgColor="">
-          <Layout>
-            <Fill>
-              <Heading>Problems?</Heading>
-              <List>
-                <ListItem>
-                  Making pages dynamic with <b>user interaction</b> and dynamic data
-                </ListItem>
-                <ListItem>
-                  Web apps becoming more <b>data centric</b>
-                </ListItem>
-                <ListItem>
-                  The prevalence of <b>real time</b> pages
-                </ListItem>
-              </List>
-            </Fill>
-            {/* <Fill>
-              <Image src={images.gmail} />
-            </Fill> */}
-          </Layout>
+          <Heading>Problems?</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                Making pages dynamic with <b>user interaction</b> and dynamic data
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Web apps becoming more <b>data centric</b>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                The prevalence of <b>real time</b> pages
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
         <Slide transition={["zoom"]} bgColor="">
-          <Layout>
-            <Fill>
-              <Heading>Solutions in the past</Heading>
-              <List>
-                <ListItem>
-                  <b>Native JS</b> that manipulates the DOM
-                </ListItem>
-                <ListItem>
-                  Abstraction libraries like <b>jQuery</b>
-                </ListItem>
-                <ListItem>
-                  A string of JS "templating focussed" frameworks that culminated into <b>AngularJS</b> pages
-                </ListItem>
-              </List>
-            </Fill>
-            {/* <Fill>
-              <Image src={images.gmail} />
-            </Fill> */}
-          </Layout>
+          <Heading>Solutions in the past</Heading>
+          <List>
+            <Appear>
+              <ListItem>
+                <b>Native JS</b> that manipulates the DOM
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Abstraction libraries like <b>jQuery</b>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                A string of JS "templating focussed" frameworks that culminated into <b>AngularJS</b> pages
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="tertiary">
           <Heading textColor="primary">Enter React</Heading>
@@ -108,47 +107,65 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="tertiary" caps>Templates</Heading>
           <List>
-            <ListItem>
-              Construct webpages in <b>HTML and CSS</b>, and escape characters for dynamic data
-              <br />
-              <Code>{"<h1> {{post.title}} </h1>"}</Code>
-            </ListItem>
-            <ListItem>
-              Focus on conventional technique of keeping HTML, CSS and JS completely independent of each other
-            </ListItem>
-            <ListItem>
-              JS only fills in the holes of an HTML frontend
-            </ListItem>
+            <Appear>
+              <ListItem>
+                Construct webpages in <b>HTML and CSS</b>, and escape characters for dynamic data
+                <br />
+                <Code>{"<h1> {{post.title}} </h1>"}</Code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Focus on conventional technique of keeping HTML, CSS and JS completely independent of each other
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                JS only fills in the holes of an HTML frontend
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="tertiary" caps>Components</Heading>
           <List>
-            <ListItem>
-              Construct application logic and UI in <b>JSX</b> (and CSS) and render a “compiled” version to the DOM
-              <br />
-              <Code>{"ReactDOM.render(<h1>Hello</h1>, ...)"}</Code>
-            </ListItem>
-            <ListItem>
-              Focus on keeping multiple standalone and reusable modules independent of each other. Don’t worry about separating languages.
-            </ListItem>
-            <ListItem>
-              HTML lives inside JS and inherits the power of JS to manage the UI
-            </ListItem>
+            <Appear>
+              <ListItem>
+                Construct application logic and UI in <b>JSX</b> (and CSS) and render a “compiled” version to the DOM
+                <br />
+                <Code>{"ReactDOM.render(<h1>Hello</h1>, ...)"}</Code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Focus on keeping multiple standalone and reusable modules independent of each other. Don’t worry about separating languages.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                HTML lives inside JS and inherits the power of JS to manage the UI
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary" textColor="secondary">
           <Heading size={6} textColor="tertiary" caps>Controversial features</Heading>
           <List>
-            <ListItem>
-              Combining JS and HTML
-            </ListItem>
-            <ListItem>
-              Destroying the entire DOM and re-rendering on every cycle
-            </ListItem>
-            <ListItem>
-              Unidirectional data flow
-            </ListItem>
+            <Appear>
+              <ListItem>
+                Combining JS and HTML
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Destroying the entire DOM and re-rendering on every cycle
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem>
+                Unidirectional data flow
+              </ListItem>
+            </Appear>
           </List>
         </Slide>
         <Slide bgColor="secondary">
@@ -165,6 +182,17 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <CounterAdvanced />
+        </Slide>
+        <Slide bgColor="secondary">
+          <Heading textColor="quartenary" size={3} fit>Redux</Heading>
+          <Appear>
+            <Heading textColor="tertiary" size={6} caps fit>Better state management</Heading>
+          </Appear>
+          <Appear>
+            <Heading fit size={6}>
+              <Link textColor="primary" href="http://redux.js.org">http://redux.js.org</Link>
+            </Heading>
+          </Appear>
         </Slide>
       </Deck>
     );
